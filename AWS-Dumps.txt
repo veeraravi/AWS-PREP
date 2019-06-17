@@ -1,0 +1,2754 @@
+https://www.briefmenow.org/amazon/
+
+A Solutions Architect is designing an application that will encrypt all data in an Amazon Redshift cluster.
+
+Which action will encrypt the data at rest?
+
+A. Place the Redshift cluster in a private subnet.
+
+B. USE THE AWS KMS DEFAULT CUSTOMER MASTER KEY.
+
+C. Encrypt the Amazon EBS volumes.
+
+D. Encrypt the data using SSL/TLS.
+
+A legacy application needs to interact with local storage using iSCSI. A team needs to design a reliable storage solution to provision all new storage on AWS.
+--------------------------------------------------------------------
+
+Which storage solution meets the
+
+legacy application requirements?
+
+A. AWS Snowball storage for the legacy application until the application can be re-architected.
+
+B. AWS Storage Gateway in cached mode for the legacy application storage to write data to Amazon S3.
+
+C. AWS STORAGE GATEWAY IN
+
+stored mode for the legacy application storage to write data to Amazon S3.
+
+D. An Amazon S3 volume mounted on the legacy application server locally using the File Gateway service.
+--------------------------------------------------------------------
+A Solutions Architect is designing an architecture for a mobile gaming application. The application is expected to be very popular. The Architect needs to prevent the Amazon RDS MySQL database from becoming a bottleneck due to frequently accessed queries.
+
+Which service or feature should the Architect add to prevent a bottleneck?
+
+A. Multi-AZ feature on the RDS MySQL Database
+
+B. ELB Classic Load Balancer in front of the web application tier
+
+C. Amazon SQS in front of RDS MySQL Database
+
+D. AMAZON ELASTICACHE IN FRONT OF THE RDS MYSQL DATABASE
+--------------------------------------------------------------------
+A company is launching an application that it expects to be very popular. The company needs a database that can scale with the rest of the application. The schema will change frequently. The application cannot afford any downtime for database changes.
+
+Which AWS service allows the company to achieve these objectives?
+
+A. AMAZON REDSHIFT
+
+B. Amazon DynamoDB
+
+C. Amazon RDS MySQL
+
+D. Amazon Aurora
+
+--------------------------------------------------------------------
+A Solution Architect is designing a disaster recovery solution for a 5 TB Amazon Redshift cluster. The recovery site must be at least 500 miles (805 kilometers) from the live site.
+
+How should the Architect meet these requirements?
+
+A. Use AWS CloudFormation to deploy the cluster in a second region.
+
+B. Take a snapshot of the cluster and copy it to another Availability Zone.
+
+C. MODIFY THE REDSHIFT CLUSTER TO SPAN TWO REGIONS.
+
+D. Enable cross-region snapshots to a different region.
+
+--------------------------------------------------------------------
+A customer has written an application that uses Amazon S3 exclusively as a data store. The application works well until the customer increases the rate at which the application is updating information. The customer now reports that outdated data occasionally appears when the application accesses objects in Amazon S3.
+
+What could be the problem, given that the application logic is otherwise correct?
+
+A. THE APPLICATION IS READING PARTS OF OBJECTS FROM AMAZON S3 USING A RANGE HEADER.
+
+B. The application is reading objects from Amazon S3 using parallel object requests.
+
+C. The application is updating records by writing new objects with unique keys.
+
+D. The application is updating records by overwriting existing objects with the same keys
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a new social media application. The application must provide a secure method for uploading profile photos. Each user should be able to upload a profile photo into a shared storage location for one week after their profile is created.
+
+Which approach will meet all of these requirements?
+
+A. Use Amazon Kinesis with AWS CloudTrail for auditing the specific times when profile photos are uploaded.
+
+B. Use Amazon EBS volumes with IAM policies restricting user access to specific time periods.
+
+C. USE AMAZON S3 WITH THE DEFAULT PRIVATE ACCESS POLICY AND GENERATE PRE-SIGNED URLS EACH TIME A NEW SITE PROFILE IS CREATED.
+
+D. Use Amazon CloudFront with AWS CloudTrail for auditing the specific times when profile photos are uploaded
+
+--------------------------------------------------------------------
+An application requires block storage for file updates. The data is 500 GB and must continuously sustain 100 MiB/s of aggregate read/write operations.
+
+Which storage option is appropriate for this application?
+
+A. Amazon S3
+
+B. AMAZON EFS
+
+C. Amazon EBS
+
+D. Amazon Glacier
+
+Reference https://docs.aws.amazon.com/efs/latest/ug/performance.html
+
+--------------------------------------------------------------------
+A mobile application serves scientific articles from individual files in an Amazon S3 bucket. Articles older than 30 days are rarely read. Articles older than 60 days no longer need to be available through the application, but the application owner would like to keep them for historical purposes. 
+
+Which cost-effective solution BEST meets these requirements?
+
+A. Create a Lambda function to move files older than 30 days to Amazon EBS and move files older than 60 days to Amazon Glacier.
+
+B. Create a Lambda function to move files older than 30 days to Amazon Glacier and move files older than 60 days to Amazon EBS.
+
+C. CREATE LIFECYCLE RULES TO MOVE FILES OLDER THAN 30 DAYS TO AMAZON S3 STANDARD INFREQUENT ACCESS AND MOVE FILES OLDER THAN 60 DAYS TO AMAZON GLACIER.
+
+D. Create lifecycle rules to move files older than 30 days to Amazon Glacier and move files older than 60 days to Amazon S3 Standard Infrequent Access.
+
+--------------------------------------------------------------------
+An organization is currently hosting a large amount of frequently accessed data consisting of key-value pairs and semi-structured documents in their data center. They are planning to move this data to AWS.
+
+Which of one of the following services MOST effectively meets their needs?
+
+A. Amazon Redshift
+
+B. Amazon RDS
+
+C. AMAZON DYNAMODB
+
+D. Amazon Aurora
+
+--------------------------------------------------------------------
+A Lambda function must execute a query against an Amazon RDS database in a private subnet.
+
+Which steps are required to allow the Lambda function to access the Amazon RDS database? (Select two.)
+
+A. Create a VPC Endpoint for Amazon RDS.
+
+B. CREATE THE LAMBDA FUNCTION WITHIN THE AMAZON RDS VPC.
+
+C. CHANGE THE INGRESS RULES OF LAMBDA SECURITY GROUP, ALLOWING THE AMAZON RDS SECURITY GROUP.
+
+D. Change the ingress rules of the Amazon RDS security group, allowing the Lambda security group.
+
+E. Add an Internet Gateway (IGW) to the VPC, route the private subnet to the IGW.
+
+--------------------------------------------------------------------
+A Solutions Architect needs to build a resilient data warehouse using Amazon Redshift. The Architect needs to rebuild the Redshift cluster in another region.
+
+Which approach can the Architect take to address this requirement?
+
+A. Modify the Redshift cluster and configure cross-region snapshots to the other region.
+
+B. MODIFY THE REDSHIFT CLUSTER TO TAKE SNAPSHOTS OF THE AMAZON EBS VOLUMES EACH DAY, SHARING THOSE SNAPSHOTS WITH THE OTHER REGION.
+
+C. Modify the Redshift cluster and configure the backup and specify the Amazon S3 bucket in the other region.
+
+D. Modify the Redshift cluster to use AWS Snowball in export mode with data delivered to the other region.
+
+--------------------------------------------------------------------
+A popular e-commerce application runs on AWS. The application encounters performance issues. The database is unable to handle the amount of queries and load during peak times. The database is running on the RDS Aurora engine on the largest instance size available.
+
+What should an administrator do to improve performance?
+
+A. Convert the database to Amazon Redshift.
+
+B. Create a CloudFront distribution.
+
+C. CONVERT THE DATABASE TO USE EBS PROVISIONED IOPS.
+
+D. Create one or more read replicas.
+
+--------------------------------------------------------------------
+A Solutions Architect is designing the architecture for a new three-tier web-based e-commerce site that must be available 24/7.
+
+Requests are expected to range from 100 to 10,000 each minute. Usage can vary depending on time of day, holidays, and promotions. The design should be able to handle these volumes, with the ability to handle higher volumes if necessary.
+
+How should the Architect design the architecture to ensure the web tier is cost-optimized and can handle the expected traffic? (Select two.)
+
+A. LAUNCH AMAZON EC2 INSTANCES IN AN AUTO SCALING GROUP BEHIND AN ELB.
+
+B. Store all static files in a multi-AZ Amazon Aurora database.
+
+C. CREATE AN CLOUDFRONT DISTRIBUTION POINTING TO STATIC CONTENT IN AMAZON S3.
+
+D. Use Amazon Route 53 to route traffic to the correct region.
+
+E. Use Amazon S3 multi-part uploads to improve upload times.
+
+--------------------------------------------------------------------
+A Solution Architect is designing a three-tier web application. The Architect wants to restrict access to the database tier to accept traffic from the application servers only. However, these application servers are in an Auto Scaling group and may vary in quantity.
+
+How should the Architect configure the database servers to meet the requirements?
+
+A. Configure the database security group to allow database traffic from the application server IP addresses.
+
+B. Configure the database security group to allow database traffic from the application server security group.
+
+C. CONFIGURE THE DATABASE SUBNET NETWORK ACL TO DENY ALL INBOUND NON-DATABASE TRAFFIC FROM THE APPLICATION-TIER SUBNET.
+
+D. Configure the database subnet network ACL to allow inbound database traffic from the application-tier subnet.
+
+--------------------------------------------------------------------
+
+An Internet-facing multi-tier web application must be highly available. An ELB Classic Load Balancer is deployed in front of the web tier. Amazon EC2 instances at the web application tier are deployed evenly across two Availability Zones. The database is deployed using RDS Multi-AZ. A NAT instance is launched for Amazon EC2 instances and database resources to access the Internet. These instances are not assigned with public IP addresses.
+
+Which component poses a potential single point of failure in this architecture?
+
+A. Amazon EC2
+
+B. NAT instance
+
+C. ELB CLASSIC LOAD BALANCER
+
+D. Amazon RDS
+--------------------------------------------------------------------
+A call center application consists of a three-tier application using Auto Scaling groups to automatically scale resources as needed. Users report that every morning at 9:00 AM the system becomes very slow for about 15 minutes. A Solution Architect determines that a large percentage of the call center staff starts work at 9:00 AM, so Auto Scaling does not have enough time to scale out to meet demand.
+
+How can the Architect fix the problem?
+
+A. CHANGE THE AUTO SCALING GROUP-S SCALE OUT EVENT TO SCALE BASED ON NETWORK UTILIZATION.
+
+B. Create an Auto Scaling scheduled action to scale out the necessary resources at 8:30 AM every morning.
+
+C. Use Reserved Instances to ensure the system has reserved the right amount of capacity for the scale-up events.
+
+D. Permanently keep a steady state of instances that is needed at 9:00 AM to guarantee available resources,but leverage Spot Instances.
+--------------------------------------------------------------------
+An e-commerce application is hosted in AWS. The last time a new product was launched, the application experienced a performance issue due to an enormous spike in traffic. Management decided that capacity must be doubled the week after the product is launched.
+
+Which is the MOST efficient way for management to ensure that capacity requirements are met?
+
+A. ADD A STEP SCALING POLICY.
+
+B. Add a Dynamic Scaling policy.
+
+C. Add a Scheduled Scaling action.
+
+D. Add Amazon EC2 Spot Instances.
+
+--------------------------------------------------------------------
+A customer owns a simple API for their website that receives about 1,000 requests each day and has an average response time of 50 ms. It is currently hosted on one c4 large instance.
+
+Which changes to the architecture will provide high availability at the LOWEST cost?
+
+A. CREATE AN AUTO SCALING GROUP WITH A MINIMUM OF ONE INSTANCE AND A MAXIMUM OF TWO INSTANCES, THEN USE AN APPLICATION LOAD BALANCER TO BALANCE THE TRAFFIC.
+
+B. Recreate the API using Amazon API Gateway and use AWS Lambda as the service backend.
+
+C. Create an Auto Scaling group with a maximum of two instances, then use an Application Load Balancer to balance the traffic.
+
+D. Recreate the API using Amazon API Gateway and integrate the new API with the existing backend service.
+
+--------------------------------------------------------------------
+A Solution Architect is designing an application that uses Amazon EBS volumes. The volumes must be backed up to a different region.
+
+How should the Architect meet this requirement?
+
+A. Create EBS snapshots directly from one region to another.
+
+B. Move the data to an Amazon S3 bucket and enable cross-region replication.
+
+C. CREATE EBS SNAPSHOTS AND THEN COPY THEM TO THE DESIRED REGION.
+
+D. Use a script to copy data from the current Amazon EBS volume to the destination Amazon EBS volume.
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a solution that includes a managed VPN connection. To monitor whether the VPN connection is up or down, the Architect should use:
+
+A. an external service to ping the VPN endpoint from outside the VPC.
+
+B. AWS CloudTrail to monitor the endpoint.
+
+C. THE CLOUDWATCH TUNNELSTATE METRIC.
+
+D. an AWS Lambda function that parses the VPN connection logs.
+
+Reference
+
+--------------------------------------------------------------------
+A social networking portal experiences latency and throughput issues due to an increased number of users. Application servers use very large datasets from an Amazon RDS database, which creates a performance bottleneck on the database.
+
+Which AWS service should be used to improve performance?
+
+A. Auto Scaling
+
+B. Amazon SQS
+
+C. AMAZON ELASTICACHE
+
+D. ELB Application Load Balancer
+--------------------------------------------------------------------
+A Solutions Architect is designing network architecture for an application that has compliance requirements. The application will be hosted on Amazon EC2 instances in a private subnet and will be using Amazon S3 for storing data. The compliance requirements mandate that the data cannot traverse the public Internet.
+
+What is the MOST secure way to satisfy this requirement?
+
+A. Use a NAT Instance.
+
+B. Use a NAT Gateway.
+
+C. USE A VPC ENDPOINT.
+
+D. Use a Virtual Private Gateway.
+
+Reference https://aws.amazon.com/blogs/aws/new-vpc-endpoint-for-amazon-s3/
+
+--------------------------------------------------------------------
+Developers are creating a new online transaction processing (OLTP) application for a small database that is very read-write intensive. A single table in the database is updated continuously throughout the day, and the developers want to ensure that the database performance is consistent.
+
+Which Amazon EBS storage option will achieve the MOST consistent performance to help maintain application performance?
+
+A. PROVISIONED IOPS SSD
+
+B. General Purpose SSD
+
+C. Cold HDD
+
+D. Throughput Optimized HDD
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a log-processing solution that re
+
+quires storage that supports up to 500 MB/s throughput. The data is sequentially accessed by an Amazon EC2 instance.
+
+Which Amazon storage type satisfies these requirements?
+
+A. EBS Provisioned IOPS SSD (io1)
+
+B. EBS General Purpose SSD (gp2)
+
+C. EBS  THROUGHPUT OPTIMIZED HDD (ST1)
+
+D. EBS Cold HDD (sc1)
+
+Reference
+
+--------------------------------------------------------------------
+A company-s development team plans to create an Amazon S3 bucket that contains millions of images. The team wants to maximize the read performance of Amazon S3.
+
+Which naming scheme should the company use?
+
+A. Add a date as the prefix.
+
+B. Add a sequential id as the suffix.
+
+C. Add a hexadecimal hash as the suffix.
+
+D. ADD A HEXADECIMAL
+
+hash as the prefix.
+
+Reference
+
+--------------------------------------------------------------------
+A Solutions Architect needs to design a solution that will enable a security team to detect, review, and perform root cause analysis of security incidents that occur in a cloud environment. The Architect must provide a centralized view of all API events for current and future AWS regions.
+
+How should the Architect accomplish this task?
+
+A. Enable AWS CloudTrail logging in each individual region. Repeat this for all future regions.
+
+B. Enable Amazon CloudWatch logs for all AWS services across all regions and aggregat
+
+e them in a single Amazon S3 bucket.
+
+C. Enable AWS Trusted Advisor security checks and report all security incidents for all regions.
+
+D. ENABLE AWS CLOUDTRAIL BY CREATING A NEW TRAIL AND APPLY THE TRAIL TO ALL REGIONS.
+
+--------------------------------------------------------------------
+A company has a legacy application using a proprietary file system and plans to migrate the application to AWS.
+
+Which storage service should the company use?
+
+A. AMAZON DYNAMODB
+
+B. Amazon S3
+
+C. Amazon EBS
+
+D. Amazon EFS
+
+--------------------------------------------------------------------
+A company plans to use AWS for all new batch processing workloads. The company-s developers use Docker containers for the new batch processing. The system design must accommodate critical and non-critical batch processing workloads 24/7.
+
+How should a Solutions Architect design this architecture in a cost-efficient manner?
+
+A. Purchase Reserved Instances to run all containers. Use Auto Scaling groups to schedule jobs.
+
+B. Host a container management service on Spot Instances. Use Reserved Instances to run Docker containers.
+
+C. USE AMAZON ECS ORCHESTRATION AND AUTO SCALING GROUPS: ONE WITH RESERVE INSTANCES, ONE WITH SPOT INSTANCES.
+
+D. Use Amazon ECS to manage container orchestration. Purchase Reserved Instances to run all batch workloads at the same time.
+
+--------------------------------------------------------------------
+A company is evaluating Amazon S3 as a data storage solution for their daily analyst report. The company has implemented stringent requirements concerning the security of the data at rest. Specifically, the CISO asked for the use of envelope encryption with separate permissions for the use of an envelope key, automated rotation of the encryption keys, and visibility into when an encryption key was used and by whom.
+
+Which steps should a Solutions Architect take to satisfy the security requirements requested by the CISO?
+
+A. Create an Amazon S3 bucket to store the reports and use Server-Side Encryption with Customer-Provided Keys (SSE-C).
+
+B. CREATE AN AMAZON S3 BUCKET TO STORE THE REPORTS AND USE SERVER-SIDE ENCRYPTION WITH AMAZON S3-MANAGED KEYS (SSE-S3).
+
+C. Create an Amazon S3 bucket to store the reports and use Server-Side Encryption with AWS KMS-Managed Keys (SSE-KMS).
+
+D. Create an Amazon S3 bucket to store the reports and use Amazon s3 versioning with Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3).
+
+Reference
+
+--------------------------------------------------------------------
+A customer has a production application that frequently overwrites and deletes data, the application requires the most up-to-date version of the data every time it is requested.
+
+Which storage should a Solutions Architect recommend to bet accommodate this use case?
+
+A. AMAZON S3 --
+
+B. Amazon RDS
+
+C. Amazon RedShift
+
+D. AWS Storage Gateway
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a photo application on AWS. Every time a user uploads a photo to Amazon S3, the Architect must insert a new item to a DynamoDB table.
+
+Which AWS-managed service is the BEST fit to insert the item?
+
+A. Lambda@Edge
+
+B. AWS LAMBDA
+
+C. Amazon API Gateway
+
+D. Amazon EC2 instances
+
+Reference https://aws.amazon.com/blogs/machine-learning/build-your-own-face-recognition-service-using-amazon-rekognition/
+
+--------------------------------------------------------------------
+An application relies on messages being sent and received in order. The volume will never exceed more than 300 transactions each second.
+
+Which service should be used?
+
+A. AMAZON SQS --
+
+B. Amazon SNS
+
+C. Amazon ECS
+
+D. AWS STS
+
+--------------------------------------------------------------------
+A Solutions Architect is designing an application on AWS that uses persistent block storage. Data must be encrypted at rest.
+
+Which solution meets the requirement?
+
+A. Enable SSL on Amazon EC2 instances.
+
+B. ENCRYPT AMAZON EBS VOLUMES ON AMAZON EC2 INSTANCES.
+
+C. Enable server-side encryption on Amazon S3.
+
+D. Encrypt Amazon EC2 Instance Storage.
+
+Reference
+
+--------------------------------------------------------------------
+A company is launching a static website using the zone apex (mycompany.com). The company wants to use Amazon Route 53 for DNS.
+
+Which steps should the company perform to implement a scalable and cost-effective solution? (Choose two.)
+
+A. Host the website on an Amazon EC2 instance with ELB and Auto Scaling, and map a Route 53 alias record to the ELB endpoint.
+
+B. Host the website using AWS Elastic Beanstalk, and map a Route 53 alias record to the Beanstalk stack.
+
+C. HOST THE WEBSITE ON AN AMAZON EC2 INSTANCE, AND MAP A ROUTE 53 ALIAS RECORD TO THE PUBLIC IP ADDRESS OF THE AMAZON EC2 INSTANCE.
+
+D. SERVE THE WEBSITE FROM AN AMAZON S3 BUCKET, AND MAP A ROUTE 53 ALIAS RECORD TO THE WEBSITE ENDPOINT.
+
+E. Create a Route 53 hosted zone, and set the NS records of the domain to use Route 53 name servers.
+
+--------------------------------------------------------------------
+A manufacturing company captures data from machines running at customer sites. Currently, thousands of machines send data every 5 minutes, and this is expected to grow to hundreds of thousands of machines in the near future. The data is logged with the intent to be analyzed in the future as needed.
+
+What is the SIMPLEST method to store this streaming data at scale?
+
+A. Create an Amazon Kinesis Firehouse delivery stream to store the data in Amazon S3.
+
+B. CREATE AN AUTO SCALING GROUP OF AMAZON EC2 SERVERS BEHIND ELBS TO WRITE THE DATA INTO AMAZON RDS.
+
+C. Create an Amazon SQS queue, and have the machines write to the queue.
+
+D. Create an Amazon EC2 server farm behind an ELB to store the data in Amazon EBS Cold HDD volumes.
+
+--------------------------------------------------------------------
+A bank is writing new software that is heavily dependent upon the database transactions for write consistency. The application will also occasionally generate reports on data in the 
+database, and will do joins across multiple tables. The database must automatically scale as the amount of data growth.
+
+Which AWS service should be used to run the database?
+
+A. Amazon S3
+
+B. Amazon Aurora
+
+C. AMAZON DYNAMODB
+
+D. Amazon Redshift
+--------------------------------------------------------------------
+A Solutions Architect is designing a new application that needs to access data in a different AWS account located within the same region. The data must not be accessed over the Internet. Which solution will meet these requirements with the LOWEST cost?
+
+A. Add rules to the security groups in each account.
+
+B. ESTABLISH A VPC PEERING CONNECTION BETWEEN ACCOUNTS.
+
+C. Configure Direct Connect in each account.
+
+D. Add a NAT Gateway to the data account.
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a mobile application that will capture receipt images to track expenses. The Architect wants to store the images on Amazon S3. However, uploading images through the web server will create too much traffic.
+
+What is the MOST efficient method to store images from a mobile application on Amazon S3?
+
+A. Upload directly to S3 using a pre-signed URL.
+
+B. Upload to a second bucket, and have a Lambda event copy the image to the primary bucket.
+
+C. UPLOAD TO A SEPARATE AUTO SCALING GROUP OF SERVERS BEHIND AN ELB CLASSIC LOAD BALANCER, AND HAVE THEM WRITE TO THE AMAZON S3 BUCKET.
+
+D. Expand the web server fleet with Spot Instances to provide the resources to handle the images.
+
+--------------------------------------------------------------------
+A company requires that the source, destination, and protocol of all IP packets be recorded when traversing a private subnet.
+
+What is the MOST secure and reliable method of accomplishing this goal.
+
+A. CREATE VPC FLOW LOGS ON THE SUBNET.
+
+B. Enable source destination check on private Amazon EC2 instances.
+
+C. Enable AWS CloudTrail logging and specify an Amazon S3 bucket for storing log files.
+
+D. Create an Amazon CloudWatch log to capture packet information.
+
+--------------------------------------------------------------------
+A Solutions Architect has a multi-layer application running
+
+in Amazon VPC. The application has an ELB Classic Load Balancer as the front end in a public subnet, and an Amazon EC2-based reverse proxy that performs content-based routing to two backend Amazon EC2 instances hosted in a private subnet. The Architect sees tremendous traffic growth and is concerned that the reverse proxy and current backend set up will be insufficient.
+
+Which actions should the Architect take to achieve a cost-effective solution that ensures the application automatically scales to meet traffic demand? (Select two.)
+
+A. REPLACE THE AMAZON EC2 REVERSE PROXY WITH AN ELB INTERNAL CLASSIC LOAD BALANCER.
+
+B. ADD AUTO SCALING TO THE AMAZON EC2 BACKEND FLEET.
+
+C. Add Auto Scaling to the Amazon EC2 reverse proxy layer.
+
+D. Use t2 burstable instance typ
+
+es for the backend fleet.
+
+E. Replace both the frontend and reverse proxy layers with an ELB Application Load Balancer.
+
+--------------------------------------------------------------------
+A company is launching a marketing campaign on their website tomorrow and expects a significant increase in traffic. The website is designed as a multi-tiered web architecture, and the increase in traffic could potentially overwhelm the current design.
+
+What should a Solutions Architect do to minimize the effects from a potential failure in one or more of the tiers?
+
+A. Migrate the database to Amazon RDS.
+
+B. Set up DNS failover to a statistic website.
+
+C. USE AUTO SCALING TO KEEP UP WITH THE DEMAND.
+
+D. Use both a SQL and a NoSQL database in the design.
+--------------------------------------------------------------------
+A web application experiences high compute costs due to serving a high amount of static web content.
+
+How should the web server architecture be designed to be the MOST cost-efficient?
+
+A. Create an Auto Scaling group to scale out based on average CPU usage.
+
+B. CREATE AN AMAZON CLOUDFRONT DISTRIBUTION TO PULL STATIC CONTENT FROM AN AMAZON S3 BUCKET.
+
+C. Leverage Reserved Instances to add additional capacity at a significantly lower price.
+
+D. Create a multi-region deployment using an Amazon Route 53 geolocation routing policy.
+
+--------------------------------------------------------------------
+A Solutions Architect plans to migrate NAT instances to NAT gateway. The Architect has NAT instances with scripts to manage high availability.
+
+What is the MOST efficient method to achieve similar high availability with NAT gateway?
+
+A. Remove source/destination check on NAT instances.
+
+B. LAUNCH A NAT GATEWAY IN EACH AVAILABILITY ZONE.
+
+C. Use a mix of NAT instances and NAT gateway.
+
+D. Add an ELB Application Load Balancer in front of NAT gateway.
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a solution to store a large quantity of event data in Amazon S3. The Architect anticipates that the workload will consistently exceed 100 requests each second.
+
+What should the Architect do in Amazon S3 to optimize performance?
+
+A. RANDOMIZE A KEY NAME PREFIX.
+
+B. Store the event data in separate buckets.
+
+C. Randomize the key name suffix.
+
+D. Use Amazon S3 Transfer Acceleration.
+
+Reference
+
+--------------------------------------------------------------------
+A user is testing a new service that receives location updates from 3,600 rental cars every hour.
+
+Which service will collect data and automatically scale to accommodate production workload?
+
+A. AMAZON EC2
+
+B. Amazon Kinesis Firehose
+
+C. Amazon EBS
+
+D. Amazon API Gateway
+
+
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a web application. The web and application tiers need to access the Internet, but they cannot be accessed from the Internet.
+
+Which of the following steps is required?
+
+A. Attach an Elastic IP address to each Amazon EC2 instance and add a route from the private subnet to the public subnet.
+
+B. LAUNCH A NAT GATEWAYIN THE PUBLIC SUBNET AND ADD A ROUTE TO IT FROM THE PRIVATE SUBNET.
+
+C. Launch Amazon EC2 instances in the public subnet and change the security group to allow outbound traffic on port 80.
+
+D. Launch a NAT gateway in the private subnet and deploy a NAT inst ance in the private subnet.
+
+--------------------------------------------------------------------
+An application stack includes an Elastic Load Balancer in a public subnet, a fleet of Amazon EC2 instances in an Auto Scaling group, and an Amazon RDS MySQL cluster. Users connect to the application from the Internet. The application servers and database must be secure.
+
+How should a Solutions Architect perform this task?
+
+A. Create a private subnet for the Amazon EC2 instances and a public subnet for the Amazon RDS cluster.
+
+B. Create a private subnet for the Amazon EC2 instances and a private subnet for the Amazon RDS cluster.
+
+C. CREATE A PUBLIC SUBNET FOR THE AMAZON EC2 INSTANCES AND A PRIVATE SUBNET FOR THE AMAZON RDS CLUSTER.
+
+D. Create a public subnet for the Amazon EC2 instances and a public subnet for the Amazon RDS cluster.
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a solution for a media company that will stream large amounts of data from an Amazon EC2 instance. The data streams are typically large and sequential, and must be able to support up to 500 MB/s.
+
+Which storage type will meet the performance requirements of this application?
+
+A. EBS Provisioned IOPS SSD
+
+B. EBS General Purpose SSD
+
+C. EBS Cold HDD
+
+D. EBS THROUGHPUT OPTIMIZED HDD  --
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a database solution that must support a high rate of random disk reads and writes. It must provide consistent performance, and requires long-term persistence. Which storage solution BEST meets these requirements?
+
+A. AN AMAZON EBS PROVISIONED IOPS VOLUME
+
+B. An Amazon EBS General Purpose volume
+
+C. An Amazon EBS Magnetic volume
+
+D. An Amazon EC2 Instance Store
+
+--------------------------------------------------------------------
+A Solutions Architect is designing solution with AWS Lambda where different environments require different database passwords.
+
+What should the Architect do to accomplish this in a secure and scalable way?
+
+A. Create a Lambda function for each individual environment.
+
+B. Use Amazon DynamoDB to store environmental variables.
+
+C. USE ENCRYPTED AWS LAMBDA ENVIRONMENTAL VARIABLES.
+
+D. Implement a dedicated Lambda function for distributing variables.
+
+--------------------------------------------------------------------
+A news organization plans to migrate their 20 TB video archive to AWS. The files are rarely accessed , but when they are, a request is made in advance and a 3 to 5-hour retrieval time frame is acceptable. However, when there is a breaking news story, the editors require access to archived footage within minutes.
+
+Which storage solution meets the needs of this organization while providing the LOWEST cost of storage?
+
+A. Store the archive in Amazon S3 Reduced Redundancy Storage.
+
+B. STORE THE ARCHIVE IN AMAZON GLACIER AND USE STANDARD RETRIEVAL FOR ALL CONTENT.
+
+C. Store the archive in Amazon Glacier and pay th
+
+e additional charge for expedited retrieval when needed.
+
+D. Store the archive in Amazon S3 with a lifecycle policy to move this to S3 Infrequent Access after 30 days.
+
+--------------------------------------------------------------------
+A Solutions Architect is building a multi-tier website. The web servers will be in a public subnet, and the database servers will be in a private subnet. Only the web servers can be accessed from the Internet. The database servers must have Internet access for software updates.
+
+Which solution meets the requirements?
+
+A. Assign Elastic IP addresses to the database instances.
+
+B. Allow Internet traffic on the private subnet through the network ACL.
+
+C. USE A NAT GATEWAY. --
+ 
+D. Use an egress-only Internet Gateway.
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a Lambda function that calls an API to list all running Amazon RDS instances.
+
+How should the request be authorized?
+
+A. Create an IAM access and secret key, and store it in the Lambda function.
+
+B. Create an IAM role to the Lambda function with permissions to list all Amazon RDS instances.
+
+C. CREATE AN IAM ROLE TO AMAZON RDS WITH PERMISSIONS TO LIST ALL AMAZON RDS INSTANCES.
+
+D. Create an IAM access and secret key, and store it in an encrypted RDS database.
+
+--------------------------------------------------------------------
+A Solutions Architect is building an application on AWS that will require 20,000 IOPS on a particular volume to support a media event. Once the event ends, the IOPS need is no longer required. The marketing team asks the Architect to build the platform to optimize storage without incurring downtime.
+
+How should the Architect design the platform to meet these requirements?
+
+A. Change the Amazon EC2 instant types.
+
+B. CHANGE THE EBS VOLUME TYPE TO PROVISIONED IOPS.
+
+C. Stop the Amazon EC2 instance and provision IOPS for the EBS volume.
+
+D. Enable an API Gateway to change the endpoints for the Amazon EC2 instances.
+
+--------------------------------------------------------------------
+A Solutions Architect is building a new feature using a Lambda to create metadata when a user uploads a picture to Amazon S3. All metadata must be indexed.
+
+Which AWS service should the Architect use to store this metadata?
+
+A. AMAZON S3
+
+B. Amazon DynamoDB
+
+C. Amazon Kinesis
+
+D. Amazon EFC
+
+--------------------------------------------------------------------
+An interactive, dynamic website runs on Amazon EC2 instances in a single subnet behind an ELB Classic Load Balancer.
+
+Which design changes will make the site more highly available?
+
+A. Move some Amazon EC2 instances to a subnet in a different way.
+
+B. Move the website to Amazon S3.
+
+C. CHANGE THE ELB TO AN APPLICATION LOAD BALANCER.
+
+D. Move some Amazon EC2 instances to a subnet in the same Availability Zone.
+--------------------------------------------------------------------
+A Solutions Architect is designing a web application that is running on an Amazon EC2 instance. The application stores data in DynamoDB.
+
+The Architect needs to secure access to the DynamoDB table.
+
+What combination of steps does AWS recommend to achieve secure authorization? (Select two.)
+
+A. STORE AN ACCESS KEY ON THE AMAZON EC2 INSTANCE WITH RIGHTS TO THE DYNAMO DB TABLE.
+
+B. Attach an IAM user to the Amazon EC2 instance.
+
+C. CREATE AN IAM ROLE WITH PERMISSIONS TO WRITE TO THE DYNAMODB TABLE.
+
+D. Attach an IAM role to the Amazon EC2 instance.
+
+E. Attach an IAM policy to the Amazon EC2 instance.
+
+--------------------------------------------------------------------
+A Solutions Architect is about to deploy an API on multiple EC2 instances in an Auto Scaling group behind an ELB. The support team has the following operational requirements:
+
+1 They get an alert when the requests per second go over 50,000
+
+2 They get an alert when latency goes over 5 seconds
+
+3 They can validate how many times a day users call the API requesting highly-sensitive data
+
+Which combination of steps does the Architect need to take to satisfy these operational requirements? (Select two.)
+
+A. Ensure that CloudTrail is enabled.
+
+B. CREATE A CUSTOM CLOUDWATCH METRIC TO MONITOR THE API FOR DATA ACCESS.
+
+C. Configure CloudWatch alarms for any metrics the support team requires.
+
+D. ENSURE THAT DETAILED MONITORING FOR THE EC2 INSTANCES IS ENABLED.
+
+E. Create an application to export and save CloudWatch metrics for longer term trending analysis.
+
+--------------------------------------------------------------------
+A Solutions Architect is designing a highly-available website that is served by multiple web servers hosted outside of AWS. If an instance becomes unresponsive, the Architect needs to remove it from the rotation.
+
+What is the MOST efficient way to fulfill this requirement?
+
+A. USE AMAZON CLOUDWATCH TO MONITOR UTILIZATION.
+
+B. Use Amazon API Gateway to monitor availability.
+
+C. Use an Amazon Elastic Load Balancer.
+
+D. Use Amazon Route 53 health checks.
+
+--------------------------------------------------------------------
+A company hosts a popular web application. The web application connects to a database running in a private VPC subnet. The web servers must be accessible only to customers on an SSL connection. The RDS MySQL database server must be accessible only from the web servers.
+
+How should the Architect design a solution to meet the requirements without impacting running applications?
+
+A. Create a network ACL on the web server-s subnet, and allow HTTPS inbound and MySQL outbound. Place both database and web servers on the same subnet.
+
+B. Open an HTTPS port on the security group for web servers and set the source to 0.0.0.0/0. Open the MySQL port on the database security group and attach it to the MySQL instance. Set the source to Web Server Security Group.
+
+C. Create a network ACL on the web server-s subnet, and allow HTTPS inbound, and specify the source as 0.0.0.0/0. Create a network ACL on a database subnet, allow MySQL port inbound for web servers, and deny all outbound traffic.
+
+D. OPEN THE MYSQL PORT ON THE SECURITY GROUP FOR WEB SERVERS AND SET THE SOURCE TO 0.0.0.0/0. OPEN THE HTTPS PORT ON THE DATABASE SECURITY GROUP AND ATTACH IT TO THE MYSQL INSTANCE. SET THE SOURCE TO WEB SERVER SECURITY GROUP.
+--------------------------------------------------------------------
+Can I move a Reserved Instance from one Region to another?
+
+A.No  --
+
+B.Only if they are moving into GovCloud
+
+C.Yes
+
+D.Only if they are moving to US East from another region
+--------------------------------------------------------------------
+What is Amazon Glacier? --C
+
+A.
+You mean Amazon “Iceberg”: it’s a low-cost storage service.
+
+B.
+A security tool that allows to “freeze” an EBS volume and perform computer forensics on it.
+
+C.
+A low-cost storage service that provides secure and durable storage for data archiving and backup.
+
+D.
+It’s a security tool that allows to “freeze” an EC2 instance and perform computer forensics on it.
+
+--------------------------------------------------------------------
+What is the durability of S3 RRS? --A
+
+
+A.
+99.99%
+
+B.
+99.95%
+
+C.
+99.995%
+
+D.
+99.999999999%
+
+--------------------------------------------------------------------
+What does specifying the mapping /dev/sdc=none when launching an instance do? --D
+
+
+A.
+Prevents /dev/sdc from creating the instance.
+
+B.
+Prevents /dev/sdc from deleting the instance.
+
+C.
+Set the value of /dev/sdc to ‘zero’.
+
+D.
+Prevents /dev/sdc from attaching to the instance.
+
+--------------------------------------------------------------------
+
+Is Federated Storage Engine currently supported by Amazon RDS for MySQL? --B
+
+
+A.
+Only for Oracle RDS instances
+
+B.
+No
+
+C.
+Yes
+
+D.
+Only in VPC
+--------------------------------------------------------------------
+ 
+Is there a limit to how many groups a user can be in? --A
+
+
+A.
+Yes for all users
+
+B.
+Yes for all users except root
+
+C.
+No
+
+D.
+Yes unless special permission granted
+--------------------------------------------------------------------
+True or False: When you perform a restore operation to a point in time or from a DB Snapshot, a new DB
+Instance is created with a new endpoint. --B
+
+
+A.
+FALSE
+
+B.
+TRUE
+
+--------------------------------------------------------------------
+A/An _____ acts as a firewall that controls the traffic allowed to reach one or more instances.--A
+
+
+A.
+security group
+
+B.
+ACL
+
+C.
+IAM
+
+D.
+Private IP Addresses
+
+--------------------------------------------------------------------
+Will my standby RDS instance be in the same Availability Zone as my primary? --D
+
+
+A.
+Only for Oracle RDS types
+
+B.
+Yes
+
+C.
+Only if configured at launch
+
+D. No
+
+--------------------------------------------------------------------
+While launching an RDS DB instance, on which page I can select the Availability Zone? --D
+
+
+A.
+REVIEW
+
+B.
+DB INSTANCE DETAILS
+
+C.
+MANAGEMENT OPTIONS
+
+D.
+ADDITIONAL CONFIGURATION
+
+--------------------------------------------------------------------
+What does the following command do with respect to the Amazon EC2 security groups? --B
+ec2-create-group CreateSecurityGroup
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Groups the user created security groups in to a new group for easy access.
+
+B.
+Creates a new security group for use with your account.
+
+C.
+Creates a new group inside the security group.
+
+D.
+Creates a new rule inside the security group
+
+--------------------------------------------------------------------
+In the Launch Db Instance Wizard, where can I select the backup and maintenance options? --C
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Under DB INSTANCE DETAILS
+
+B.
+Under REVIEW
+
+C.
+Under MANAGEMENT OPTIONS
+
+D.
+Under ENGINE SELECTION
+--------------------------------------------------------------------
+What happens to the data on an instance if the instance reboots (intentionally or unintentionally)? --B
+ 
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Data will be lost
+
+B.
+Data persists
+
+C.
+Data may persist however cannot be sure
+
+--------------------------------------------------------------------
+How many types of block devices does Amazon EC2 support A --A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+2
+
+B.
+3
+
+C.
+4
+
+D.
+1
+
+--------------------------------------------------------------------
+Provisioned IOPS Costs: you are charged for the IOPS and storage whether or not you use them in a given
+month. --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+FALSE
+
+B.
+TRUE
+
+--------------------------------------------------------------------
+IAM provides several policy templates you can use to automatically assign permissions to the groups you
+create. The _____ policy template gives the Admins group permission to access all account resources, except
+your AWS account information --D
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Read Only Access
+
+B.
+Power User Access
+
+C.
+AWS Cloud Formation Read Only Access
+
+D.
+Administrator Access
+--------------------------------------------------------------------
+While performing the volume status checks, if the status is insufficient-data, what does it mean? --A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+the checks may still be in progress on the volume
+
+B.
+the check has passed
+
+C.
+the check has failed
+
+--------------------------------------------------------------------
+
+IAM’s Policy Evaluation Logic always starts with a default ____________ for every request, except for those
+that use the AWS account’s root security credentials b --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Permit
+
+B.
+Deny
+
+C.
+Cancel
+--------------------------------------------------------------------
+By default, when an EBS volume is attached to a Windows instance, it may show up as any drive letter on the
+instance. You can change the settings of the _____ Service to set the drive letters of the EBS volumes per your
+specifications. --c 
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+EBSConfig Service
+
+B.
+AMIConfig Service
+
+C.
+Ec2Config Service
+
+D.
+Ec2-AMIConfig Service
+
+
+
+--------------------------------------------------------------------
+For each DB Instance class, what is the maximum size of associated storage capacity? --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+5GB
+
+B.
+1TB
+
+C.
+2TB
+
+D.
+500GB
+
+--------------------------------------------------------------------
+SQL Server __________ store logins and passwords in the master database. --C
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+can be configured to but by default does not
+
+B.
+doesn’t
+
+C.
+does
+--------------------------------------------------------------------
+
+What is Oracle SQL Developer? --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+An AWS developer who is an expert in Amazon RDS using both the Oracle and SQL Server DB engines
+
+B.
+A graphical Java tool distributed without cost by Oracle.
+
+C.
+It is a variant of the SQL Server Management Studio designed by Microsoft to support Oracle DBMS 
+functionalities
+
+D.
+A different DBMS released by Microsoft free of cost
+--------------------------------------------------------------------
+Does Amazon RDS allow direct host access via Telnet, Secure Shell (SSH), or Windows Remote Desktop
+Connection? --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Yes
+
+B.
+No
+
+C.
+Depends on if it is in VPC or not
+
+--------------------------------------------------------------------
+To view information about an Amazon EBS volume, open the Amazon EC2 console at
+https://console.aws.amazon.com/ec2/, click __________ in the Navigation pane. --D
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+EBS
+
+B.
+Describe
+
+C.
+Details
+
+D.
+Volumes
+
+--------------------------------------------------------------------
+You must increase storage size in increments of at least __________ % --C
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+40
+
+B.
+30
+
+C.
+10
+
+D.
+20
+
+--------------------------------------------------------------------
+Using Amazon IAM, can I give permission based on organizational groups? --C
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Yes but only in certain cases
+
+B.
+No
+
+C.
+Yes always
+
+
+
+--------------------------------------------------------------------
+While creating the snapshots using the API, which Action should I be using? --D
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+MakeSnapShot
+
+B.
+FreshSnapshot
+
+C.
+DeploySnapshot
+
+D.
+CreateSnapshot
+
+--------------------------------------------------------------------
+What is an isolated database environment running in the cloud (Amazon RDS) called? -- A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+DB Instance
+
+B.
+DB Server
+
+C.
+DB Unit
+
+D.
+DB Volume
+
+--------------------------------------------------------------------
+While signing in REST/ Query requests, for additional security, you should transmit your requests using Secure
+Sockets Layer (SSL) by using _________  --D
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+HTTP
+
+B.
+Internet Protocol Security(IPsec)
+
+C.
+TLS (Transport Layer Security)
+
+D.
+HTTPS
+
+--------------------------------------------------------------------
+What happens to the I/O operations while you take a database snapshot? --A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+I/O operations to the database are suspended for a few minutes while the backup is in progress.
+
+B.
+I/O operations to the database are sent to a Replica (if available) for a few minutes while the backup is in 
+progress.
+
+C.
+I/O operations will be functioning normally
+
+D.
+I/O operations to the database are suspended for an hour while the backup is in progress
+
+--------------------------------------------------------------------
+Read Replicas require a transactional storage engine and are only supported for the _________ storage engine --C
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+OracleISAM
+
+B.
+MSSQLDB
+
+C.
+InnoDB
+
+D.
+MyISAM
+
+--------------------------------------------------------------------
+When running my DB Instance as a Multi-AZ deployment, can I use the standby for read or write operations? -- D
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Yes
+
+B.
+Only with MSSQL based RDS
+
+C.
+Only for Oracle RDS instances
+
+D.
+No
+
+--------------------------------------------------------------------
+When should I choose Provisioned IOPS over Standard RDS storage? -- A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+If you have batch-oriented workloads
+
+B.
+If you use production online transaction processing (OLTP) workloads.
+
+C.
+If you have workloads that are not sensitive to consistent performance
+
+--------------------------------------------------------------------
+In the ‘Detailed’ monitoring data available for your Amazon EBS volumes, Provisioned IOPS volumes
+automatically send _____ minute metrics to Amazon CloudWatch. -- B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+3
+
+B.
+1
+
+C.
+5
+
+D.
+2
+
+--------------------------------------------------------------------
+What is the minimum charge for the data transferred between Amazon RDS and Amazon EC2 Instances in the
+same Availability Zone? --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+USD 0.10 per GB
+
+B.
+No charge. It is free.
+
+C.
+USD 0.02 per GB
+
+D.
+USD 0.01 per GB
+
+--------------------------------------------------------------------
+Are Reserved Instances available for Multi-AZ Deployments? -- B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Only for Cluster Compute instances
+
+B.
+Yes for all instance types
+
+C.
+Only for M3 instance types
+
+D.
+No
+--------------------------------------------------------------------
+Which service enables AWS customers to manage users and permissions in AWS? -- B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+AWS Access Control Service (ACS)
+
+B.
+AWS Identity and Access Management (IAM)
+
+C.
+AWS Identity Manager (AIM)
+
+--------------------------------------------------------------------
+Which Amazon Storage behaves like raw, unformatted, external block devices that you can attach to your
+instances? --C
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+None of these.
+
+B.
+Amazon Instance Storage
+
+C.
+Amazon EBS
+
+D.
+All of these
+
+--------------------------------------------------------------------
+Which Amazon service can I use to define a virtual network that closely resembles a traditional data center? -- A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Amazon VPC
+
+B.
+Amazon ServiceBus
+
+C.
+Amazon EMR
+
+D.
+Amazon RDS
+
+--------------------------------------------------------------------
+Fill in the blanks : _____ let you categorize your EC2 resources in different ways, for example, by purpose,
+owner, or environment. --A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Tags
+
+B.
+special filters
+
+C.
+pointers
+
+D.
+functions
+
+--------------------------------------------------------------------
+What is the command line instruction for running the remote desktop client in Windows?--B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+desk.cpl
+
+B.
+mstsc
+--------------------------------------------------------------------
+Amazon RDS automated backups and DB Snapshots are currently supported for only the ______ storage
+engine --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+MyISAM
+
+B.
+InnoDB
+
+--------------------------------------------------------------------
+MySQL installations default to port _____. -- A
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+3306
+
+B.
+443
+
+C.
+80
+
+D.
+1158
+
+--------------------------------------------------------------------
+If you have chosen Multi-AZ deployment, in the event of a planned or unplanned outage of your primary DB
+Instance, Amazon RDS automatically switches to the standby replic
+a. The automatic failover mechanism simply changes the ______ record of the main DB Instance to point to
+the standby DB Instance. --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+DNAME
+
+B.
+CNAME
+
+C.
+TXT
+
+D.
+MX
+
+--------------------------------------------------------------------
+If I want to run a database in an Amazon instance, which is the most recommended Amazon storage option? -- B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+Amazon Instance Storage
+
+B.
+Amazon EBS
+
+C.
+You can’t run a database inside an Amazon instance.
+
+D.
+Amazon S3
+
+--------------------------------------------------------------------
+In regards to IAM you can edit user properties later, but you cannot use the console to change the
+___________. -- A
+ 
+PrepAway - Latest Free Exam Questions & Answers
+A.
+user name
+
+B.
+password
+
+C.
+default group
+
+--------------------------------------------------------------------
+Can I test my DB Instance against a new version before upgrading? --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+No
+
+B.
+Yes
+
+C.
+Only in VPC
+
+--------------------------------------------------------------------
+True or False: If you add a tag that has the same key as an existing tag on a DB Instance, the new value
+overwrites the old value. --B
+
+PrepAway - Latest Free Exam Questions & Answers
+A.
+FALSE
+
+B.
+TRUE
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+
+
+
+
+
+
